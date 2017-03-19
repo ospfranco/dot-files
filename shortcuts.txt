@@ -1,0 +1,23 @@
+
+Shortcuts And Tips
+
+VSCode
+------
+ctrl + g = go to line
+alt + up/down = move line
+shift + alt + up/down = copy line up/down
+shift + cmd + m = problems
+
+PSQL
+----
+\l = List databases
+\c = Connect to database
+\d = List tables
+
+Python
+------
+python -m SimpleHTTPServer 8080
+
+Idea
+----
+ctrl + g = select next ocurrance
