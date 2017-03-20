@@ -11,6 +11,10 @@
 # export NVM_DIR="/Users/osp/.nvm"
 # [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
+# update yarn
+# curl -o- -L https://yarnpkg.com/install.sh | bash
+# export PATH="$HOME/.yarn/bin:$PATH"
+
 # don't put duplicate lines in the history or force ignoredups and ignorespace                                                                                                                                 
 HISTCONTROL=ignoredups:ignorespace                                                                                              
 # append to the history file, don't overwrite it    
