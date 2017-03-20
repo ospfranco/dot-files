@@ -1,0 +1,45 @@
+{
+  "workbench.welcome.enabled": false,
+  "editor.tabSize": 2,
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.DS_Store": true,
+    "**/node_modules": true,
+    "**/.idea": true,
+    "**/android": true,
+    "**/ios": true,
+    "**/.vscode": true,
+    "**/yarn.lock": true,
+    "**/tmp": true,
+    "**/.sonar": true,
+    "**/.happypack": true
+  },
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/node_modules/**": true,
+    "**/tmp": true
+  },
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "**/.git": true,
+    "**/.DS_Store": true,
+    "**/tmp": true,
+    "**/.sonar": true,
+    "**/.happypack": true
+  },
+  "files.trimTrailingWhitespace": true,
+  "html.suggest.html5": true,
+  "typescript.check.tscVersion": false,
+  "javascript.validate.enable": false,
+  "extensions.autoUpdate": true,
+  "terminal.integrated.cursorBlinking": true,
+  "eslint.autoFixOnSave": true,
+  "workbench.activityBar.visible": false,
+  "workbench.editor.enablePreviewFromQuickOpen": false,
+  "workbench.colorTheme": "One Monokai",
+  "workbench.iconTheme": "material-icon-theme",
+  "telemetry.enableTelemetry": false,
+  "telemetry.enableCrashReporter": false
+}

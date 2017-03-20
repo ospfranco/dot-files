@@ -4,6 +4,7 @@
 - functionalSnippet <- small snippet for JS ES5 that shows refactoring from imperative to functional
 - keyboard-en.plist <- mapping for mac os keyboad to get rid of useless characters and show only latin/german chars, follow this tut: http://weblog.masukomi.org/2015/12/13/esperanto-press-and-hold-characters/
 - shortcuts <- shortcuts I use day to day on certain programs I use
+- settings.json <- settings for vscode
 
 TODO:
 - Create a bash script for initializing installation on new macs (ALWAYS USEFUL, ALWAYS WANTED TO DO IT, NEVER HAD THE TIME)
