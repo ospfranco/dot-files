@@ -11,22 +11,18 @@
 # export NVM_DIR="/Users/osp/.nvm"
 # [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
-# update yarn
-# curl -o- -L https://yarnpkg.com/install.sh | bash
-# export PATH="$HOME/.yarn/bin:$PATH"
-
-# don't put duplicate lines in the history or force ignoredups and ignorespace                                                                                                                                 
-HISTCONTROL=ignoredups:ignorespace                                                                                              
-# append to the history file, don't overwrite it    
-shopt -s histappend                                                                                                                                                                                                        
-# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)                                                                                                     
-HISTSIZE=100000                                       
+# don't put duplicate lines in the history or force ignoredups and ignorespace
+HISTCONTROL=ignoredups:ignorespace
+# append to the history file, don't overwrite it
+shopt -s histappend
+# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
+HISTSIZE=100000
 HISTFILESIZE=200000
 
 parse_git_branch() {
      git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
-export PS1="\[\e[36m\]\u@\h / \[\e[0m\]\[\e[32m\]\w /\[\e[33m\]\$(parse_git_branch) >\[\e[00m\] \n"
+export PS1="\[\e[36m\]\u@\h | \[\e[0m\]\[\e[32m\]\w |\[\e[33m\]\$(parse_git_branch) >\[\e[00m\] \n"
 
 export GREP_OPTIONS='--color=auto'
 
@@ -83,3 +79,5 @@ my_ip () {
              echo "'$1' is not a valid file"
          fi
     }
+
+export PATH="$HOME/.yarn/bin:$PATH"
