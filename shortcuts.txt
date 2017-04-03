@@ -21,3 +21,6 @@ python -m SimpleHTTPServer 8080
 Idea
 ----
 ctrl + g = select next ocurrance
+
+Generate passwords for nginx/apache
+sudo htpasswd -c /etc/nginx/.htpasswd exampleuser
