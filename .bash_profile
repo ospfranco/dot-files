@@ -1,4 +1,12 @@
-# Oscar Franco, 19 Mar 2017, Munich, Germany
+#
+#
+#
+# DEPRECATED NOW USING ZSH, but might revert to bash, zsh can be slow
+#
+#
+#
+#
+#
 
 #--------------------------------
 #ENVIROMENT CONFIGURATION
