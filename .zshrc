@@ -64,15 +64,6 @@ my_ip () {
   ifconfig en0 | grep inet | grep -v inet6
 }
 
-stop_all_docker_containers() {
-  docker stop $(docker ps -a -q)
-  docker rm $(docker ps -a -q)
-}
-
-kill_codehelper () {
-  ps aux | grep "Code Helper" | grep -v "grep" | awk '{print $2}' | xargs kill
-}
-
 #   extract:  Extract most know archives with one command
 #   ---------------------------------------------------------
 extract () {
