@@ -1,6 +1,8 @@
 export ZSH="/Users/osp/.oh-my-zsh"
+export TERM="xterm-256color"
 
-ZSH_THEME="blinks"
+# ZSH_THEME="blinks"
+ZSH_THEME="bullet-train"
 CASE_SENSITIVE="true"
 
 plugins=(
@@ -19,7 +21,7 @@ fi
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 #--------------------------------
-#ALIASES
+# DAY TO DAY ALIASES
 #--------------------------------
 alias ll='ls -FGlAhp' 			           # List directory
 alias ..='cd ../'                      # Go back 1 directory level
@@ -31,7 +33,7 @@ alias hrep='history | grep $1'         # Search through typed history
 alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"  # Output tree view
 
 #-------------------------------
-#GIT ALIASES
+# GIT DUH
 #-------------------------------
 alias gpp='git pull'
 alias gpr='git pull --rebase'
@@ -46,6 +48,12 @@ alias go='git checkout '
 alias gk='gitk --all&'
 alias gx='gitx --all'
 alias grim='git rebase -i master'
+
+
+#-----------------------
+# SAVING MYSELF SOME TIME
+#-----------------------
+alias dev='cd ~/dev'
 
 #------------------------
 # SUBROUTINES
@@ -91,6 +99,7 @@ extract () {
 export NVM_DIR="/Users/osp/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
-export ANDROID_HOME=/Users/osp/Library/Android/sdk
-export PATH="$ANDROID_HOME/platform-tools:$PATH"
-export PATH="$PATH:~/bin"
+#export ANDROID_HOME=/Users/osp/Library/Android/sdk
+#export PATH="$ANDROID_HOME/platform-tools:$PATH"
+export PATH=$PATH:~/bin
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
