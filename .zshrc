@@ -1,31 +1,30 @@
 export ZSH="/Users/osp/.oh-my-zsh"
 export TERM="xterm-256color"
 
-# ZSH_THEME="blinks"
-ZSH_THEME="bullet-train"
+ZSH_THEME="frisk"
 CASE_SENSITIVE="true"
 
 plugins=(
   git
+  zsh-autosuggestions
+  zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
 # Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='nano'
-else
-  export EDITOR='nano'
-fi
+export EDITOR='nano'
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
 
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=60'
+
 #--------------------------------
 # DAY TO DAY ALIASES
 #--------------------------------
-alias ll='ls -FGlAhp' 			           # List directory
+alias ll='ls -FGlAhp'                              # List directory
 alias ..='cd ../'                      # Go back 1 directory level
-alias f='open -a Finder ./'		         # Open directory in finder
+alias f='open -a Finder ./'                      # Open directory in finder
 alias c='clear'                        # c: Clear terminal display
 alias psa='ps -A'                      # ps with -A flag
 alias psag='ps -A | grep $1'           # Search through running processes
@@ -87,10 +86,20 @@ extract () {
   fi
 }
 
-export NVM_DIR="/Users/osp/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
-#export ANDROID_HOME=/Users/osp/Library/Android/sdk
-#export PATH="$ANDROID_HOME/platform-tools:$PATH"
 export PATH=$PATH:~/bin
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export ANDROID_HOME=/Users/osp/Library/Android/sdk
+export PATH="$ANDROID_HOME/platform-tools:$PATH"
+
+export VOLTA_HOME="$HOME/.volta"
+[ -s "$VOLTA_HOME/load.sh" ] && . "$VOLTA_HOME/load.sh"
+
+export PATH="$VOLTA_HOME/bin:$PATH"
+export PATH="$HOME/Library/Python/3.7/bin:$PATH"
+
+# tabtab source for packages
+# uninstall by removing these lines
+[[ -f ~/.config/tabtab/__tabtab.zsh ]] && . ~/.config/tabtab/__tabtab.zsh || true
+
+REACT_DEBUGGER=firefox
+[ -f "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env" ] && source "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env"

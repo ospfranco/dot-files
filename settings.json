@@ -6,13 +6,15 @@
     "**/.idea": true,
     "**/.sonar": true,
     "**/.svn": true,
-    "**/build": true,
+    // "**/build": true,
+    "**/buildAndroid": true,
     "**/dist": true,
     "**/dll": true,
     "**/ios/Pods": true,
     "**/node_modules": true,
     "**/tmp": true,
-    "**/yarn.lock": true
+    "**/yarn.lock": true,
+    "**/.webpack": true
   },
   "files.watcherExclude": {
     "**/.git/objects/**": true,
@@ -26,45 +28,55 @@
     "**/.DS_Store": true,
     "**/tmp": true,
     "**/.sonar": true,
-    "**/.happypack": true
+    "**/.happypack": true,
+    "**/*.bundle": true,
+    "**/*.map": true,
+    "**/.webpack": true
   },
-  "html.suggest.html5": true,
-  "editor.minimap.enabled": false,
   "extensions.autoUpdate": true,
-  "workbench.activityBar.visible": true,
   "telemetry.enableTelemetry": false,
   "telemetry.enableCrashReporter": false,
-  "extensions.ignoreRecommendations": true,
-  //   "workbench.startupEditor": "newUntitledFile",
-  // "eslint.autoFixOnSave": true,
-  "workbench.editor.enablePreviewFromQuickOpen": false,
-  // "emmet.showAbbreviationSuggestions": false,
-  // "emmet.showExpandedAbbreviation": "never",
+  "eslint.autoFixOnSave": true,
+  "emmet.showAbbreviationSuggestions": false,
+  "emmet.showExpandedAbbreviation": "never",
   "editor.detectIndentation": false,
   "explorer.confirmDragAndDrop": false,
   "explorer.confirmDelete": false,
   "debug.node.autoAttach": "on",
   "typescript.updateImportsOnFileMove.enabled": "always",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
-    "source.fixAll.tslint": true,
     // "source.organizeImports": true,
+    "source.fixAll": true
   },
-  // "editor.fontFamily": "'Roboto Mono'",
-  // "editor.fontLigatures": true,
-  "terminal.integrated.rendererType": "dom",
-  // "breadcrumbs.enabled": true,
-  "workbench.statusBar.visible": false,
-  "editor.fontSize": 12,
   "typescript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": false,
   "workbench.settings.editor": "json",
-  // "editor.cursorSmoothCaretAnimation": true,
   "workbench.tips.enabled": false,
-  "editor.renderWhitespace": "boundary",
   "editor.suggestSelection": "first",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "workbench.startupEditor": "newUntitledFile",
   "window.zoomLevel": 0,
-  "gitlens.showWhatsNewAfterUpgrades": false,
-  "workbench.colorTheme": "Cobalt2"
+  "editor.acceptSuggestionOnCommitCharacter": false,
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.activityBar.visible": false,
+  "terminal.integrated.shell.osx": "/bin/zsh",
+  "workbench.colorTheme": "Minimal Fedu",
+  "editor.tokenColorCustomizations": {
+    "comments": "#b9ff15"
+  },
+  "workbench.colorCustomizations": {
+    "editorCursor.foreground": "#15a1ff",
+    "terminalCursor.foreground": "#15a1ff"
+  },
+  "editor.fontFamily": "Menlo, Monaco, 'Courier New', monospace",
+  "editor.minimap.enabled": false,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "editor.lineNumbers": "interval",
+  "editor.cursorStyle": "block"
 }
