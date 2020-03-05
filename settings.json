@@ -1,14 +1,14 @@
 {
-  "editor.tabSize": 2,
   "files.exclude": {
     "**/.DS_Store": true,
     "**/.happypack": true,
     "**/.idea": true,
     "**/.sonar": true,
     "**/.svn": true,
-    // "**/build": true,
+    "**/build": true,
     "**/buildAndroid": true,
     "**/dist": true,
+    "**/cdk.out": true,
     "**/dll": true,
     "**/ios/Pods": true,
     "**/node_modules": true,
@@ -36,47 +36,81 @@
   "extensions.autoUpdate": true,
   "telemetry.enableTelemetry": false,
   "telemetry.enableCrashReporter": false,
-  "eslint.autoFixOnSave": true,
-  "emmet.showAbbreviationSuggestions": false,
-  "emmet.showExpandedAbbreviation": "never",
-  "editor.detectIndentation": false,
+  //   "emmet.showAbbreviationSuggestions": false,
+  // "emmet.showExpandedAbbreviation": "never",
   "explorer.confirmDragAndDrop": false,
   "explorer.confirmDelete": false,
-  "debug.node.autoAttach": "on",
+  "explorer.compactFolders": false,
+  "debug.node.autoAttach": "off",
   "typescript.updateImportsOnFileMove.enabled": "always",
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
-    // "source.organizeImports": true,
-    "source.fixAll": true
+    "source.fixAll.eslint": true
   },
   "typescript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": false,
   "workbench.settings.editor": "json",
   "workbench.tips.enabled": false,
   "editor.suggestSelection": "first",
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-  "workbench.startupEditor": "newUntitledFile",
   "window.zoomLevel": 0,
   "editor.acceptSuggestionOnCommitCharacter": false,
-  "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "workbench.activityBar.visible": false,
+  "terminal.integrated.shell.osx": "/bin/zsh",
+  "editor.tokenColorCustomizations": {
+    "comments": "#FF9900",
+    "strings": "#0094FF"
   },
+  // "editor.tokenColorCustomizations": {
+  //   "[Material Theme Lighter High Contrast]": {
+  //     "textMateRules": [
+  //       {
+  //         "scope": [
+  //           "variable",
+  //           "foreground",
+  //         ],
+  //         "settings": {
+  //           "foreground": "#2C2C2C",
+  //         }
+  //       },
+  //       {
+  //         "scope": "string",
+  //         "settings": {
+  //           "foreground": "#00416A",
+  //         }
+  //       },
+  //       {
+  //         "scope": "comment",
+  //         "settings": {
+  //           "foreground": "#FF9900",
+  //         }
+  //       }
+  //     ]
+  //   },
+  //   "[Material Theme Ocean High Contrast]": {
+  //     "textMateRules": [
+  //       {
+  //         "scope": "comment",
+  //         "settings": {
+  //           "foreground": "#FF9900",
+  //         }
+  //       }
+  //     ]
+  //   }
+  // },
+  // "editor.fontFamily": "Fira Code",
+  "editor.minimap.enabled": false,
+  "editor.fontLigatures": false,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "workbench.colorTheme": "One Dark Pro",
+  "workbench.colorCustomizations": {},
+  // "editor.rulers": [
+  //     80
+  // ],
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "workbench.activityBar.visible": false,
-  "terminal.integrated.shell.osx": "/bin/zsh",
-  "workbench.colorTheme": "Minimal Fedu",
-  "editor.tokenColorCustomizations": {
-    "comments": "#b9ff15"
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "workbench.colorCustomizations": {
-    "editorCursor.foreground": "#15a1ff",
-    "terminalCursor.foreground": "#15a1ff"
-  },
-  "editor.fontFamily": "Menlo, Monaco, 'Courier New', monospace",
-  "editor.minimap.enabled": false,
-  "javascript.updateImportsOnFileMove.enabled": "always",
-  "editor.lineNumbers": "interval",
-  "editor.cursorStyle": "block"
+  "rust-client.updateOnStartup": true,
+  "rust.all_features": true
 }
