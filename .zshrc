@@ -25,13 +25,14 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=60'
 alias ll='ls -FGlAhp' 			           # List directory
 alias ..='cd ../'                      # Go back 1 directory level
 alias f='open -a Finder ./'		         # Open directory in finder
+alias c='clear'                        # c: Clear terminal display
 alias psa='ps -A'                      # ps with -A flag
 alias psag='ps -A | grep $1'           # Search through running processes
 alias hrep='history | grep $1'         # Search through typed history
 alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"  # Output tree view
 
 #-------------------------------
-# GIT DUH
+# GIT FU
 #-------------------------------
 alias gpp='git pull'
 alias gpr='git pull --rebase'
@@ -41,7 +42,7 @@ alias gaa='git add .'
 alias gb='git branch '
 alias gc='git commit -m'
 alias gd='git diff'
-alias gp='git push -q'
+alias gp='git push'
 alias go='git checkout '
 alias gk='gitk --all&'
 alias gx='gitx --all'
@@ -49,7 +50,7 @@ alias grim='git rebase -i master'
 
 
 #-----------------------
-# VERY PERSONAL STUFF
+# SAVING MYSELF SOME TIME
 #-----------------------
 alias dev='cd ~/dev'
 
@@ -57,9 +58,15 @@ alias dev='cd ~/dev'
 # SUBROUTINES
 #------------------------
 
-#function my_ip() # get IP adresses
+#  my_ip: Get's current IP address
 my_ip () {
   ifconfig en0 | grep inet | grep -v inet6
+}
+
+# gac: git add . and git commit rolled up into one
+gac () {
+  git add .
+  git commit "$1"
 }
 
 #   extract:  Extract most know archives with one command
@@ -87,3 +94,21 @@ extract () {
 
 
 export PATH=$PATH:~/bin
+export ANDROID_HOME=/Users/osp/Library/Android/sdk
+export PATH="$ANDROID_HOME/platform-tools:$PATH"
+
+
+export PATH="$HOME/Library/Python/3.7/bin:$PATH"
+
+# tabtab source for packages
+# uninstall by removing these lines
+[[ -f ~/.config/tabtab/__tabtab.zsh ]] && . ~/.config/tabtab/__tabtab.zsh || true
+
+[ -f "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env" ] && source "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env"
+
+# configuration for rust
+export PATH="$HOME/.cargo/bin:$PATH" 
+
+# volta
+export VOLTA_HOME="/Users/osp/.volta"
+grep --silent "$VOLTA_HOME/bin" <<< $PATH || export PATH="$VOLTA_HOME/bin:$PATH"
