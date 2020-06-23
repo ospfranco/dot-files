@@ -1,32 +1,30 @@
 export ZSH="/Users/osp/.oh-my-zsh"
-export TERM="xterm-256color"
-
-ZSH_THEME="frisk"
 CASE_SENSITIVE="true"
 
 plugins=(
-  git
   zsh-autosuggestions
-  zsh-syntax-highlighting
 )
 
+# PROMPT=$'
+# %{$fg[white]%}%*%{$reset_color%} - %{$fg[white]%}%n@%m%{$reset_color%} %{$fg[blue]%}%/%{$reset_color%} $(git_prompt_info)
+# '
+
+PROMPT=$'
+%{$fg[blue]%}%/%{$reset_color%} %{$fg[white]%}%n@%m%{$reset_color%} $(git_prompt_info)
+'
+
 source $ZSH/oh-my-zsh.sh
-# Preferred editor for local and remote sessions
-export EDITOR='nano'
-
-# ssh
-# export SSH_KEY_PATH="~/.ssh/rsa_id"
-
+export LANG=en_US.UTF-8
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=60'
 
 #--------------------------------
 # DAY TO DAY ALIASES
 #--------------------------------
-alias ll='ls -FGlAhp' 			           # List directory
+alias ll='ls -FGlAhp'                              # List directory
 alias ..='cd ../'                      # Go back 1 directory level
-alias f='open -a Finder ./'		         # Open directory in finder
+alias f='open -a Finder ./'                      # Open directory in finder
 alias psa='ps -A'                      # ps with -A flag
-alias psag='ps -A | grep $1'           # Search through running processes
+alias psrep='ps -A | grep $1'           # Search through running processes
 alias hrep='history | grep $1'         # Search through typed history
 alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"  # Output tree view
 
@@ -51,7 +49,7 @@ alias grim='git rebase -i master'
 #-----------------------
 # SAVING MYSELF SOME TIME
 #-----------------------
-alias dev='cd ~/dev'
+alias cev='cd ~/dev'
 
 #------------------------
 # SUBROUTINES
