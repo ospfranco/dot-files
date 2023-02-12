@@ -9,28 +9,24 @@ plugins=(
 # %{$fg[white]%}%*%{$reset_color%} - %{$fg[white]%}%n@%m%{$reset_color%} %{$fg[blue]%}%/%{$reset_color%} $(git_prompt_info)
 # '
 
+# PROMPT=$'
+# %{$fg[green]%}%/%{$reset_color%} %{$fg[white]%}%n@%m%{$reset_color%} $(git_prompt_info)
+# '
 PROMPT=$'
-%{$fg[blue]%}%/%{$reset_color%} %{$fg[white]%}%n@%m%{$reset_color%} $(git_prompt_info)
+%{$fg[green]%}%/%{$reset_color%} $(git_prompt_info)
 '
 
 source $ZSH/oh-my-zsh.sh
 export LANG=en_US.UTF-8
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=60'
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#00a2ff'
 
-#--------------------------------
-# DAY TO DAY ALIASES
-#--------------------------------
-alias ll='ls -FGlAhp'                              # List directory
-alias ..='cd ../'                      # Go back 1 directory level
-alias f='open -a Finder ./'                      # Open directory in finder
-alias psa='ps -A'                      # ps with -A flag
-alias psrep='ps -A | grep $1'           # Search through running processes
-alias hrep='history | grep $1'         # Search through typed history
-alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"  # Output tree view
+alias ..='cd ../'                      
+alias f='open -a Finder ./'                      
+alias psa='ps -A'                      
+alias psrep='ps -A | grep $1'           
+alias hrep='history | grep $1'         
+alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"  
 
-#-------------------------------
-# GIT FU
-#-------------------------------
 alias gpp='git pull'
 alias gpr='git pull --rebase'
 alias gs='git status '
@@ -41,34 +37,19 @@ alias gc='git commit -m'
 alias gd='git diff'
 alias gp='git push'
 alias go='git checkout '
-alias gk='gitk --all&'
-alias gx='gitx --all'
-alias grim='git rebase -i master'
 
+alias cev='cd ~/Developer'
 
-#-----------------------
-# SAVING MYSELF SOME TIME
-#-----------------------
-alias cev='cd ~/dev'
-
-#------------------------
-# SUBROUTINES
-#------------------------
-
-#  my_ip: Get's current IP address
 my_ip () {
   ifconfig en0 | grep inet | grep -v inet6
 }
 
-# gac: git add . and git commit rolled up into one
 gac () {
   git add .
   git commit -m "$1"
   git push
 }
 
-#   extract:  Extract most know archives with one command
-#   ---------------------------------------------------------
 extract () {
   if [ -f $1 ] ; then
     case $1 in
@@ -90,5 +71,9 @@ extract () {
   fi
 }
 
-
+eval "$(/opt/homebrew/bin/brew shellenv)"
 export PATH=$PATH:~/bin
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
+export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_SDK_ROOT/emulator
+export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
