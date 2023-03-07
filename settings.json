@@ -55,18 +55,23 @@
   "editor.acceptSuggestionOnCommitCharacter": false,
   "security.workspace.trust.untrustedFiles": "open",
   "workbench.preferredLightColorTheme": "GitHub Light Colorblind (Beta)",
-  "workbench.preferredDarkColorTheme": "Tokyo Night",
+  "workbench.preferredDarkColorTheme": "Vesper",
   "window.autoDetectColorScheme": true,
   "workbench.layoutControl.enabled": false,
   "workbench.welcomePage.walkthroughs.openOnInstall": false,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "workbench.colorTheme": "Tokyo Night",
+  "workbench.colorTheme": "Vesper",
   "editor.fontFamily": "'JetBrains Mono', Monaco, 'Courier New', monospace",
   "editor.tokenColorCustomizations": {
-    "comments": "#d4922f"
+    "comments": "#ff9e49"
+  },
+  "workbench.colorCustomizations": {
+    "editorSuggestWidget.selectedBackground": "#208fc2"
   },
   "workbench.settings.editor": "json",
   "telemetry.telemetryLevel": "off",
   "breadcrumbs.enabled": false,
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue"
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "cmake.configureOnOpen": true,
+  "javascript.updateImportsOnFileMove.enabled": "always"
 }
