@@ -1,15 +1,13 @@
 {
   "files.exclude": {
+    "**/.git": false,
     "**/.DS_Store": true,
     "**/.idea": true,
-    "**/build": true,
+    "**/build": false,
     "**/buildAndroid": true,
-    // "**/node_modules": true,
     "**/tmp": true,
-    // "**/yarn.lock": true,
     "**/.webpack": true,
-    "**/.bundle": true,
-    "**/vendor": true
+    "**/.bundle": true
   },
   "files.watcherExclude": {
     "**/.git/objects/**": true,
@@ -39,21 +37,29 @@
   "[rust]": {
     "editor.defaultFormatter": "rust-lang.rust-analyzer"
   },
+  "[cpp]": {
+    "editor.defaultFormatter": "xaver.clang-format"
+  },
+  "[swift]": {
+    "editor.defaultFormatter": "vknabel.vscode-apple-swift-format"
+  },
+  "[kotlin]": {
+    "editor.defaultFormatter": "esafirm.kotlin-formatter"
+  },
   "typescript.updateImportsOnFileMove.enabled": "always",
   "editor.codeActionsOnSave": {
-    "source.fixAll": "explicit"
+    "source.fixAll": "always"
   },
   "workbench.startupEditor": "newUntitledFile",
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
-  "editor.tabSize": 2,
+  "editor.rulers": [80],
   "editor.gotoLocation.multipleDefinitions": "goto",
   "editor.gotoLocation.multipleTypeDefinitions": "goto",
-  "editor.minimap.enabled": false,
   "editor.acceptSuggestionOnCommitCharacter": false,
   "security.workspace.trust.untrustedFiles": "open",
   "workbench.preferredLightColorTheme": "GitHub Light",
-  "workbench.preferredDarkColorTheme": "GitHub Dark Dimmed",
+  "workbench.preferredDarkColorTheme": "Tokyo Night",
   "window.autoDetectColorScheme": true,
   "workbench.layoutControl.enabled": false,
   "workbench.welcomePage.walkthroughs.openOnInstall": false,
@@ -61,7 +67,7 @@
   "editor.fontFamily": "'JetBrains Mono', Monaco, 'Courier New', monospace",
   "editor.fontLigatures": true,
   "editor.tokenColorCustomizations": {
-    "comments": "#1184ff",
+    "comments": "#ff5c11",
     // "comments": "#54ff51",
     "textMateRules": [
       {
@@ -80,11 +86,10 @@
   "editor.suggestSelection": "first",
   "editor.inlineSuggest.enabled": true,
   "git.openRepositoryInParentFolders": "never",
-  // "peacock.affectTitleBar": false,
+  "peacock.affectTitleBar": false,
   "peacock.affectActivityBar": false,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "terminal.integrated.scrollback": 30000,
-  "cmake.configureOnOpen": false,
   "gitlens.advanced.messages": {
     "suppressFileNotUnderSourceControlWarning": true
   },
@@ -93,50 +98,59 @@
   "workbench.fontAliasing": "auto",
   "workbench.tips.enabled": false,
   "workbench.tree.renderIndentGuides": "always",
-  "workbench.activityBar.location": "hidden",
   "workbench.colorTheme": "GitHub Dark Dimmed",
   "cmake.showOptionsMovedNotification": false,
   "lldb.library": "/Applications/Xcode.app/Contents/SharedFrameworks/LLDB.framework/Versions/A/LLDB",
   "lldb.launch.expressions": "native",
   "workbench.tree.indent": 18,
-  "[cpp]": {
-    "editor.defaultFormatter": "xaver.clang-format"
-  },
-  // "rust-analyzer.cargo.target": "aarch64-linux-android",
-  // "rust-analyzer.cargo.target": "aarch64-apple-ios",
-  "rust-analyzer.files.watcher": "server",
-  "github.copilot.editor.enableAutoCompletions": true,
-  "github.copilot.editor.enableCodeActions": false,
-  "[swift]": {
-    "editor.defaultFormatter": "vknabel.vscode-apple-swift-format"
-  },
-  "[kotlin]": {
-    "editor.defaultFormatter": "fwcd.kotlin"
-  },
+  "rust-analyzer.files.excludeDirs": [
+    "opacity-ios",
+    "react-native-opacity",
+    "opacity-android",
+    "android",
+    "scripts",
+    "generated"
+  ],
+  "rust-analyzer.cargo.target": "aarch64-apple-ios",
+  "rust-analyzer.cargo.features": "all",
   "cSpell.userWords": [
     "aarch",
     "androideabi",
+    "appcast",
     "ARCHS",
     "armeabi",
     "armv",
     "autogen",
     "bridgeless",
     "cbindgen",
+    "cctx",
+    "clippy",
+    "clsx",
+    "cocoapod",
+    "cocoapods",
     "codegen",
+    "codibly",
     "compat",
     "dylib",
+    "ETAG",
     "façade",
     "fqdb",
+    "hasher",
+    "immer",
     "jstring",
     "libc",
     "libmy",
     "libsql",
     "libsqlite",
     "lipo",
+    "luxon",
     "nativemodule",
+    "nativewind",
     "oslog",
+    "ospfranco",
     "podspec",
     "println",
+    "reqwest",
     "rowid",
     "runtimes",
     "rustc",
@@ -144,11 +158,26 @@
     "samplesdk",
     "sqlx",
     "staticlib",
+    "tailwindcss",
     "tauri",
+    "tccutil",
     "thiserror",
     "tlsn",
     "trnslcd",
+    "typecheck",
+    "typeorm",
     "XCFRAMEWORK",
-    "xcodebuild"
-  ]
+    "xcodebuild",
+    "xxxs"
+  ],
+  "git.autofetch": true,
+  "makefile.configureOnOpen": false,
+  "diffEditor.experimental.showMoves": true,
+  "extensions.ignoreRecommendations": true,
+  "diffEditor.ignoreTrimWhitespace": true,
+  "editor.minimap.enabled": false,
+  "vim.smartRelativeLine": true,
+  "githubPullRequests.pullBranch": "never",
+  "chat.editing.alwaysSaveWithGeneratedChanges": true,
+  "window.confirmSaveUntitledWorkspace": false
 }
