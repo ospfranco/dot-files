@@ -1,3 +1,13 @@
+export PATH=~/bin:$PATH
+export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export ANDROID_NDK_HOME=$ANDROID_HOME/ndk/26.1.10909125
+export ANDROID_NDK_ROOT=$ANDROID_HOME/ndk/26.1.10909125
+export NDK_HOME=$ANDROID_HOME/ndk/26.1.10909125
+export PATH=$PATH:$ANDROID_SDK_ROOT/emulator
+export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
+export JAVA_HOME=/Applications/Android\ Studio.app/Contents/jbr/Contents/Home
+
 parse_git_branch() {
   git rev-parse --is-inside-work-tree &>/dev/null || return
   local branch
@@ -28,7 +38,10 @@ fi
 eval "$(${HOMEBREW_PREFIX}/bin/brew shellenv)"
 eval "$(${HOMEBREW_PREFIX}/bin/mise activate zsh)"
 
+# Homebrew vars
 export HOMEBREW_DOWNLOAD_CONCURRENCY=auto
+export HOMEBREW_NO_ENV_HINTS=1
+export HOMEBREW_UPDATE_GREEDY=1
 
 FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
 autoload -Uz compinit && compinit
@@ -62,8 +75,6 @@ setopt prompt_subst
 PROMPT="%F{blue}%~
 "
 
-
-
 alias f='open -a Finder ./'                      
 alias psa='ps -A'
 alias psrep='ps -A | grep $1'
@@ -89,17 +100,3 @@ alias ...='../..'
 alias ....='../../..'
 alias .....='../../../../'
 alias ......='../../../../..'
-
-export PATH=~/bin:$PATH
-export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk
-export ANDROID_HOME=$HOME/Library/Android/sdk
-export ANDROID_NDK_HOME=$ANDROID_HOME/ndk/26.1.10909125
-export ANDROID_NDK_ROOT=$ANDROID_HOME/ndk/26.1.10909125
-export NDK_HOME=$ANDROID_HOME/ndk/26.1.10909125
-export PATH=$PATH:$ANDROID_SDK_ROOT/emulator
-export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
-
-export PATH=$PATH:/Users/osp/.cargo/bin
-export HOMEBREW_NO_ENV_HINTS=1
-export JAVA_HOME=/Applications/Android\ Studio.app/Contents/jbr/Contents/Home
-
