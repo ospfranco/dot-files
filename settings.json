@@ -1,6 +1,6 @@
 {
   "files.exclude": {
-    "**/.git": false,
+    "**/.git": true,
     "**/.DS_Store": true,
     "**/.idea": true,
     "**/build": false,
@@ -8,6 +8,7 @@
     "**/tmp": true,
     "**/.webpack": true,
     "**/.bundle": true
+    // "**/vendor": true
   },
   "files.watcherExclude": {
     "**/.git/objects/**": true,
@@ -25,58 +26,48 @@
     "**/target": true
   },
   "extensions.autoUpdate": true,
-  "[objective-c]": {
-    "editor.defaultFormatter": "xaver.clang-format"
-  },
-  "[objective-cpp]": {
-    "editor.defaultFormatter": "xaver.clang-format"
-  },
-  "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
   "[rust]": {
     "editor.defaultFormatter": "rust-lang.rust-analyzer"
   },
-  "[cpp]": {
-    "editor.defaultFormatter": "xaver.clang-format"
-  },
+  // "[cpp]": {
+  //   "editor.defaultFormatter": "xaver.clang-format"
+  // },
   "[swift]": {
     "editor.defaultFormatter": "vknabel.vscode-apple-swift-format"
   },
-  "[kotlin]": {
-    "editor.defaultFormatter": "esafirm.kotlin-formatter"
+  "[toml]": {
+    "editor.defaultFormatter": "tamasfe.even-better-toml"
   },
   "typescript.updateImportsOnFileMove.enabled": "always",
   "editor.codeActionsOnSave": {
     "source.fixAll": "always"
   },
+  "[zig]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll": "never"
+    }
+  },
   "workbench.startupEditor": "newUntitledFile",
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
-  "editor.rulers": [80],
+  "editor.tabSize": 2,
   "editor.gotoLocation.multipleDefinitions": "goto",
   "editor.gotoLocation.multipleTypeDefinitions": "goto",
   "editor.acceptSuggestionOnCommitCharacter": false,
   "security.workspace.trust.untrustedFiles": "open",
-  "workbench.preferredLightColorTheme": "GitHub Light",
-  "workbench.preferredDarkColorTheme": "Tokyo Night",
+  "workbench.preferredLightColorTheme": "GitHub Light Colorblind (Beta)",
+  "workbench.preferredDarkColorTheme": "GitHub Dark Colorblind (Beta)",
   "window.autoDetectColorScheme": true,
   "workbench.layoutControl.enabled": false,
   "workbench.welcomePage.walkthroughs.openOnInstall": false,
   "editor.formatOnSave": true,
+  "html.format.enable": true,
   "editor.fontFamily": "'JetBrains Mono', Monaco, 'Courier New', monospace",
   "editor.fontLigatures": true,
   "editor.tokenColorCustomizations": {
-    "comments": "#ff5c11",
+    "comments": "#1184ff"
     // "comments": "#54ff51",
-    "textMateRules": [
-      {
-        "scope": "comment",
-        "settings": {
-          "fontStyle": "bold"
-        }
-      }
-    ]
+    // "comments": "#FF8C00",
   },
   "workbench.settings.editor": "json",
   "telemetry.telemetryLevel": "off",
@@ -86,9 +77,6 @@
   "editor.suggestSelection": "first",
   "editor.inlineSuggest.enabled": true,
   "git.openRepositoryInParentFolders": "never",
-  "peacock.affectTitleBar": false,
-  "peacock.affectActivityBar": false,
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "terminal.integrated.scrollback": 30000,
   "gitlens.advanced.messages": {
     "suppressFileNotUnderSourceControlWarning": true
@@ -99,20 +87,7 @@
   "workbench.tips.enabled": false,
   "workbench.tree.renderIndentGuides": "always",
   "workbench.colorTheme": "GitHub Dark Dimmed",
-  "cmake.showOptionsMovedNotification": false,
-  "lldb.library": "/Applications/Xcode.app/Contents/SharedFrameworks/LLDB.framework/Versions/A/LLDB",
-  "lldb.launch.expressions": "native",
   "workbench.tree.indent": 18,
-  "rust-analyzer.files.excludeDirs": [
-    "opacity-ios",
-    "react-native-opacity",
-    "opacity-android",
-    "android",
-    "scripts",
-    "generated"
-  ],
-  "rust-analyzer.cargo.target": "aarch64-apple-ios",
-  "rust-analyzer.cargo.features": "all",
   "cSpell.userWords": [
     "aarch",
     "androideabi",
@@ -121,6 +96,7 @@
     "armeabi",
     "armv",
     "autogen",
+    "autoreleasing",
     "bridgeless",
     "cbindgen",
     "cctx",
@@ -131,7 +107,9 @@
     "codegen",
     "codibly",
     "compat",
+    "dlopen",
     "dylib",
+    "dylibs",
     "ETAG",
     "façade",
     "fqdb",
@@ -144,6 +122,7 @@
     "libsqlite",
     "lipo",
     "luxon",
+    "mylib",
     "nativemodule",
     "nativewind",
     "oslog",
@@ -152,6 +131,7 @@
     "println",
     "reqwest",
     "rowid",
+    "rpath",
     "runtimes",
     "rustc",
     "rustup",
@@ -170,14 +150,53 @@
     "xcodebuild",
     "xxxs"
   ],
-  "git.autofetch": true,
-  "makefile.configureOnOpen": false,
   "diffEditor.experimental.showMoves": true,
   "extensions.ignoreRecommendations": true,
-  "diffEditor.ignoreTrimWhitespace": true,
+  "diffEditor.ignoreTrimWhitespace": false,
   "editor.minimap.enabled": false,
   "vim.smartRelativeLine": true,
   "githubPullRequests.pullBranch": "never",
-  "chat.editing.alwaysSaveWithGeneratedChanges": true,
-  "window.confirmSaveUntitledWorkspace": false
+  "gitlens.hovers.currentLine.over": "line",
+  "gitlens.currentLine.scrollable": false,
+  "gitlens.statusBar.enabled": false,
+  "gitlens.heatmap.locations": [
+    "overview"
+  ],
+  "gitlens.heatmap.fadeLines": false,
+  "gitlens.codeLens.enabled": false,
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "github.copilot.enable": {
+    "*": false
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "chat.commandCenter.enabled": false,
+  "workbench.navigationControl.enabled": false,
+  "rust-analyzer.restartServerOnConfigChange": true,
+  "rust-analyzer.testExplorer": true,
+  "rust-analyzer.inlayHints.bindingModeHints.enable": true,
+  "rust-analyzer.inlayHints.closureCaptureHints.enable": true,
+  "vim.surround": true,
+  "window.commandCenter": false,
+  "vscode_custom_css.imports": [
+    "file:///Users/osp/.vscode/scripts/resize-quickinput-widget.js"
+  ],
+  "terminal.integrated.enableMultiLinePasteWarning": "never",
+  "explorer.confirmPasteNative": false,
+  "workbench.editor.enablePreview": false,
+  "debug.allowBreakpointsEverywhere": true,
+  "gitlens.ai.model": "vscode",
+  "gitlens.ai.vscode.model": "copilot:gpt-4.1",
+  "[dockercompose]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.autoIndent": "advanced",
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "[github-actions-workflow]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  }
 }
