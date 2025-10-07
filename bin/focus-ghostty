@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+if wmctrl -lx | grep -qi "ghostty.Ghostty"; then
+  # Focus the first Ghostty window
+  wmctrl -xa ghostty.Ghostty
+else
+  # Launch Ghostty
+  ghostty &
+fi
