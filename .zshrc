@@ -17,6 +17,17 @@ gac () {
 
 source ~/.zsh_secrets
 
+if [[ "$OSTYPE" == darwin* ]]; then
+  # macOS (Apple Silicon default)
+  export HOMEBREW_PREFIX="/opt/homebrew"
+else
+  # Linux (common Linuxbrew prefix)
+  export HOMEBREW_PREFIX="/home/linuxbrew/.linuxbrew"
+fi
+
+eval "$(${HOMEBREW_PREFIX}/bin/brew shellenv)"
+eval "$(${HOMEBREW_PREFIX}/bin/mise activate zsh)"
+
 export HOMEBREW_DOWNLOAD_CONCURRENCY=auto
 
 FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
@@ -51,8 +62,7 @@ setopt prompt_subst
 PROMPT="%F{blue}%~
 "
 
-eval "$(/opt/homebrew/bin/brew shellenv)"
-eval "$(/opt/homebrew/bin/mise activate zsh)"
+
 
 alias f='open -a Finder ./'                      
 alias psa='ps -A'
