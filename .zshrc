@@ -75,7 +75,10 @@ alias l='eza -l -b --icons=always -a --show-symlinks --group-directories-first -
 alias del='rm -rf'
 alias upsub="git pull && git submodule foreach 'git checkout main && git pull'"
 alias studio='open -a "Android Studio"'
-
+alias ...='../..'
+alias ....='../../..'
+alias .....='../../../../'
+alias ......='../../../../..'
 
 export PATH=~/bin:$PATH
 export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk
