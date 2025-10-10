@@ -45,7 +45,19 @@ export HOMEBREW_NO_ENV_HINTS=1
 export HOMEBREW_UPDATE_GREEDY=1
 
 FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
-autoload -Uz compinit && compinit
+autoload -Uz compinit colors
+compinit
+colors
+
+# Enable menu selection
+zstyle ':completion:*' menu select
+
+# Highlight current selection
+zstyle ':completion:*:default' list-colors "${(s.:.)LS_COLORS}"
+
+# Make directory selection distinct
+zstyle ':completion:*:descriptions' format '%F{yellow}-- %d --%f'
+zstyle ':completion:*' group-name ''
 
 setopt autocd
 
