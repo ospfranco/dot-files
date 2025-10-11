@@ -81,12 +81,12 @@ source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=8'
-RPROMPT='$(parse_git_branch)'
-setopt prompt_subst
-# PROMPT="%F{blue}%n %F{cyan}%~
+# RPROMPT='$(parse_git_branch)'
+# setopt prompt_subst
+# # PROMPT="%F{blue}%n %F{cyan}%~
+# # "
+# PROMPT="%F{blue}%~
 # "
-PROMPT="%F{blue}%~
-"
 
 alias f='open -a Finder ./'                      
 alias psa='ps -A'
@@ -112,3 +112,5 @@ alias ...='../..'
 alias ....='../../..'
 alias .....='../../../../'
 alias ......='../../../../..'
+
+eval "$(oh-my-posh init zsh --config ~/.mytheme.omp.json)"

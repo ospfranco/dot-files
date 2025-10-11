@@ -3,3 +3,4 @@ background-blur = true
 keybind = cmd+r=text:\x21\x21\x0a
 shell-integration = zsh
 confirm-close-surface=false
+theme = catppuccin-machiato.conf
